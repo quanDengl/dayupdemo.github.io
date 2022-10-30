@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .img-box {
+      position: relative;
+    }
+    .img-box img {
+      width: 100%;
+      max-height: 730px;
+    }
+    .img-box input {
+      width: 264px;
+      height: 28px;
+      position: absolute;
+      left: 50%;
+      bottom: 88px;
+      transform: translateX(-47%);
+      border: none;
+      outline: none;
+    }
+  </style>
+  <div class="img-box">
+    <img src="./img/ddf59c9dafdaeab85be7f2619d09a90.jpg" alt="">
+    <input id="btn" type="text" placeholder="密码是由0-9的数字组成的八位密码">
+  </div>
+  <script>
+    // 密码是由0-9的数字组成的八位密码
+    let input = document.getElementById('btn')
+    input.onkeydown = function(event) {
+      console.log(event.keyCode);
+      event = event || window.event;
+      if(event.keyCode  === 13) {
+        alert('是否进行登入')
+      }
+    }
+  </script>
+</body>
+</html>
